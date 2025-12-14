@@ -19,3 +19,11 @@
     text-overflow: ellipsis;
   }
 }
+
+@media (max-width: 460px) {
+  .display {
+    &__value {
+      font-size: $text-2-size;
+    }
+  }
+}

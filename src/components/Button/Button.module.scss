@@ -1,7 +1,7 @@
 @use '../../styles/variables' as *;
 
 .button {
-  height: 64px;
+  min-height: 64px;
   border-radius: $radius-200;
   border: none;
   font-size: $text-4-size;
@@ -69,4 +69,10 @@
 
 .active {
   transform: scale(0.95);
+}
+
+@media (max-width: 460px) {
+  .button {
+    font-size: $text-5-size;
+  }
 }

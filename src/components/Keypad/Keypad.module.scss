@@ -10,3 +10,15 @@
   width: 100%;
   margin-top: $spacing-200;
 }
+
+@media (max-width: 460px) {
+  .keypad {
+    gap: $spacing-200;
+  }
+}
+
+@media (max-width: 375px) {
+  .keypad {
+    gap: $spacing-100;
+  }
+}
