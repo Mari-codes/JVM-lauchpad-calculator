@@ -6,45 +6,56 @@
   border: none;
   font-size: $text-4-size;
   cursor: pointer;
-
   background: var(--color-btn-primary);
   color: var(--color-text-numbers);
+  transition: background 0.2s;
+}
 
-  &--number,
-  &--operator {
-    max-width: 101px;
-    width: 100%;
-  }
+.button--number,
+.button--operator {
+  max-width: 101px;
+  width: 100%;
+}
 
-  &--del {
-    max-width: 101px;
-    width: 100%;
-    background: var(--color-btn-secondary);
-    color: var(--color-text-header);
-  }
+.button--number:active,
+.button--operator:active {
+  background: var(--color-btn-active);
+}
 
-  &--reset,
-  &--equal {
-    max-width: 228px;
-    width: 100%;
-    margin-top: $spacing-200;
-  }
+.button--del {
+  max-width: 101px;
+  width: 100%;
+  background: var(--color-btn-secondary);
+  color: var(--color-text-header);
+}
 
-  &--reset {
-    background: var(--color-btn-secondary);
-    color: var(--color-text-header);
-  }
+.button--del:active {
+  background: var(--btn-active-options);
+}
 
-  &--equal {
-    background: var(--color-btn-result);
-    color: var(--color-text-display);
-  }
+.button--reset,
+.button--equal {
+  max-width: 228px;
+  width: 100%;
+  margin-top: $spacing-200;
 }
 
 .button--reset {
+  background: var(--color-btn-secondary);
+  color: var(--color-text-header);
   grid-column: span 2;
 }
 
+.button--reset:active {
+  background: var(--btn-active-options);
+}
+
 .button--equal {
+  background: var(--color-btn-result);
+  color: var(--color-text-display);
   grid-column: span 2;
+}
+
+.button--equal:active {
+  background: var(--btn-active-equal);
 }

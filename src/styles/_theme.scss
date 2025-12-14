@@ -11,6 +11,9 @@
   --color-btn-active: #{$black-700};
   --color-btn-secondary: #{$black-950};
   --color-btn-result: #{$red-700};
+  --color-btn-active: #{$black-700};
+  --btn-active-options: #{$black-700};
+  --btn-active-equal: #{$red-500};
 }
 
 [data-theme='light'] {
@@ -24,6 +27,9 @@
   --color-btn-active: #{$white};
   --color-btn-secondary: #{$blue-500};
   --color-btn-result: #{$orange-700};
+  --color-btn-active: #{$white};
+  --btn-active-options: #{$blue-400};
+  --btn-active-equal: #{$orange-400};
 }
 
 [data-theme='color'] {
@@ -37,4 +43,7 @@
   --color-btn-active: #{$white};
   --color-btn-secondary: #{$navy-700};
   --color-btn-result: #{$red-600};
+  --color-btn-active: #{$white};
+  --btn-active-options: #{$navy-400};
+  --btn-active-equal: #{$red-400};
 }
