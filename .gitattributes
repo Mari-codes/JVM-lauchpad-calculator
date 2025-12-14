@@ -1,0 +1,9 @@
+*.scss linguist-language=Sass
+*.sass linguist-language=Sass
+
+.prettierrc linguist-generated=true
+eslint.config.js linguist-generated=true
+README.md linguist-documentation=true
+ 
+dist/* linguist-generated=true
+node_modules/* linguist-generated=true
