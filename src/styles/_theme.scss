@@ -1,0 +1,40 @@
+@use './variables' as *;
+
+:root {
+  --background-body: #{$black-950};
+  --background-display: #{$black-950};
+  --background-container: #{$black-900};
+  --color-text-header: #{$red-700};
+  --color-text-display: #{$white};
+  --color-text-numbers: #{$white};
+  --color-btn-primary: #{$black-800};
+  --color-btn-active: #{$black-700};
+  --color-btn-secondary: #{$black-950};
+  --color-btn-result: #{$red-700};
+}
+
+[data-theme='light'] {
+  --background-body: #{$gray-200};
+  --background-display: #{$gray-100};
+  --background-container: #{$gray-300};
+  --color-text-header: #{$gray-900};
+  --color-text-display: #{$gray-900};
+  --color-text-numbers: #{$gray-900};
+  --color-btn-primary: #{$gray-200};
+  --color-btn-active: #{$white};
+  --color-btn-secondary: #{$blue-500};
+  --color-btn-result: #{$orange-700};
+}
+
+[data-theme='color'] {
+  --background-body: #{$navy-850};
+  --background-display: #{$navy-950};
+  --background-container: #{$navy-900};
+  --color-text-header: #{$white};
+  --color-text-display: #{$white};
+  --color-text-numbers: #{$navy-750};
+  --color-btn-primary: #{$gray-200};
+  --color-btn-active: #{$white};
+  --color-btn-secondary: #{$navy-700};
+  --color-btn-result: #{$red-600};
+}

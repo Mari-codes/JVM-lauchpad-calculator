@@ -1,0 +1,10 @@
+@use './variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+body {
+  font-family: $font-primary;
+  background-color: var(--background-body);
+  transition:
+    color 1s ease,
+    background-color 1s ease;
+}
