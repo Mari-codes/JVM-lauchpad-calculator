@@ -1,0 +1,50 @@
+@use '../../styles/variables' as *;
+
+.button {
+  height: 64px;
+  border-radius: $radius-200;
+  border: none;
+  font-size: $text-4-size;
+  cursor: pointer;
+
+  background: var(--color-btn-primary);
+  color: var(--color-text-numbers);
+
+  &--number,
+  &--operator {
+    max-width: 101px;
+    width: 100%;
+  }
+
+  &--del {
+    max-width: 101px;
+    width: 100%;
+    background: var(--color-btn-secondary);
+    color: var(--color-text-header);
+  }
+
+  &--reset,
+  &--equal {
+    max-width: 228px;
+    width: 100%;
+    margin-top: $spacing-200;
+  }
+
+  &--reset {
+    background: var(--color-btn-secondary);
+    color: var(--color-text-header);
+  }
+
+  &--equal {
+    background: var(--color-btn-result);
+    color: var(--color-text-display);
+  }
+}
+
+.button--reset {
+  grid-column: span 2;
+}
+
+.button--equal {
+  grid-column: span 2;
+}
