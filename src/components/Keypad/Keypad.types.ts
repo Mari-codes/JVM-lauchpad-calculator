@@ -6,4 +6,5 @@ export interface KeypadProps {
   onEqual: () => void;
   onDel: () => void;
   onReset: () => void;
+  activeKey?: string | null;
 }

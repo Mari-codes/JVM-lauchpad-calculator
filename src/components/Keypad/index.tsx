@@ -14,7 +14,8 @@ export function Keypad({
   onEqual,
   onDel,
   onReset,
-}: KeypadProps) {
+  activeKey,
+}: KeypadProps & { activeKey?: string | null }) {
   return (
     <div className={styles.keypad}>
       {KEYS.flat().map((key) => {
@@ -37,7 +38,13 @@ export function Keypad({
         }
 
         return (
-          <Button key={key} label={key} variant={variant} onClick={onClick} />
+          <Button
+            key={key}
+            label={key}
+            variant={variant}
+            onClick={onClick}
+            active={activeKey === key}
+          />
         );
       })}
     </div>

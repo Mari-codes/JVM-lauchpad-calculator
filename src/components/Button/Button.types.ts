@@ -4,4 +4,5 @@ export interface ButtonProps {
   label: string;
   variant: ButtonVariant;
   onClick: () => void;
+  active?: boolean;
 }
