@@ -1,0 +1,79 @@
+@use '../../styles/variables' as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__numbers {
+    display: flex;
+    padding-right: $spacing-200;
+    gap: $spacing-100;
+    color: var(--color-text-header);
+    font-size: $text-6-size;
+  }
+
+  &__number {
+    opacity: 0.5;
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    font-size: $text-3-size;
+    color: var(--color-text-header);
+  }
+  &__theme {
+    display: flex;
+    align-items: center;
+    gap: $spacing-200;
+  }
+  &__label {
+    font-size: $text-6-size;
+    letter-spacing: 1px;
+    color: var(--color-text-header);
+  }
+  &__switch {
+    position: relative;
+    width: 68px;
+    height: 26px;
+    background: var(--background-container);
+    border-radius: $radius-300;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__hit {
+    width: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+  &__thumb {
+    position: absolute;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    background: var(--color-btn-result);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    &[data-theme='dark'] {
+      transform: translateX(8px);
+    }
+    &[data-theme='light'] {
+      transform: translateX(26px);
+    }
+    &[data-theme='color'] {
+      transform: translateX(45px);
+    }
+  }
+}
