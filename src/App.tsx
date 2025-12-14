@@ -5,6 +5,7 @@ import { Display } from './components/Display';
 import { useCalculator } from './hooks/useCalculator';
 import { Keypad } from './components/Keypad';
 import type { Theme } from './types/theme.types';
+import { mapKeyToAction } from './utils/keyboard';
 
 function App() {
   const [theme, setTheme] = useState<Theme>('dark');
@@ -17,34 +18,7 @@ function App() {
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      const key = event.key;
-
-      if (!isNaN(Number(key))) {
-        calc.inputDigit(key);
-        setActiveKey(key);
-      }
-
-      if (['+', '-', '*', '/'].includes(key)) {
-        const op = key === '*' ? 'x' : key;
-        calc.inputOperator(op as any);
-        setActiveKey(op);
-      }
-
-      if (key === 'Enter') {
-        calc.equal();
-        setActiveKey('=');
-      }
-
-      if (key === 'Backspace') {
-        calc.del();
-        setActiveKey('DEL');
-      }
-
-      if (key === 'Escape') {
-        calc.reset();
-        setActiveKey('RESET');
-      }
-
+      mapKeyToAction(event.key, calc, setActiveKey);
       setTimeout(() => setActiveKey(null), 200);
     };
 
