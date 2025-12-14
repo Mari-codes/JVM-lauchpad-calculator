@@ -1,0 +1,12 @@
+@use '../../styles/variables' as *;
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: $spacing-300;
+  background-color: var(--background-container);
+  padding: $spacing-400;
+  border-radius: $radius-200;
+  width: 100%;
+  margin-top: $spacing-200;
+}
